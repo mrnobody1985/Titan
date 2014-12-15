@@ -81,6 +81,14 @@ echo 11
 
 if [ "$VERSION" = "svn" ] && [ ! -e "$HOME"/titandev/netsurf-svn ];then
 echo 22
+#	mkdir ${HOME}/netsurf-$VERSION
+#	cd ${HOME}/netsurf-$VERSION
+	svn checkout http://sbnc.dyndns.tv/svn/tools/netsurf-3.3 netsurf-svn
+	cd ${HOME}/netsurf-$VERSION
+fi
+
+if [ "$VERSION" = "svn1" ] && [ ! -e "$HOME"/titandev/netsurf-svn ];then
+echo 22
 	mkdir ${HOME}/netsurf-$VERSION
 	cd ${HOME}/netsurf-$VERSION
 	git clone git://git.netsurf-browser.org/buildsystem.git
@@ -171,7 +179,7 @@ echo "####################################################################"
 
 #if [ "$VERSION" = "3.0" ] || [ "$VERSION" = "3.1" ] || [ "$VERSION" = "3.2" ] || [ "$VERSION" = "git" ] || [ "$VERSION" = "svn" ]; then
 #if [ "$VERSION" = "all" ]; then
-if [ "$VERSION" = "3.0" ] || [ "$VERSION" = "3.1" ] || [ "$VERSION" = "3.2" ] || [ "$VERSION" = "git" ]; then
+if [ "$VERSION" = "3.0" ] || [ "$VERSION" = "3.1" ] || [ "$VERSION" = "3.2" ] || [ "$VERSION" = "git" ] || [ "$VERSION" = "svn" ]; then
 	make -C buildsystem clean
 	# Build the core libraries in turn (order matters due to dependencies)
 	make -C libwapcaplet clean
