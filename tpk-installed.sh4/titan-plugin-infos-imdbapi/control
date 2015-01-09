@@ -1,0 +1,8 @@
+Package: titan-plugin-infos-imdbapi
+Version: 21579
+Architecture: sh4
+Section: infos
+Description: ImdBapi Info Plugin
+Titanname: IMDb-API
+Showname: IMDb-API
+Installpath: /var

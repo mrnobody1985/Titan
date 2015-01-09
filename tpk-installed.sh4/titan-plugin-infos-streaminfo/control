@@ -1,0 +1,8 @@
+Package: titan-plugin-infos-streaminfo
+Version: 21579
+Architecture: sh4
+Section: infos
+Description: streaminfo Plugin
+Titanname: Streaminfo
+Showname: Streaminfo
+Installpath: /var

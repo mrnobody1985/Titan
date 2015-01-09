@@ -1,0 +1,8 @@
+Package: titan-plugin-infos-imdb
+Version: 21579
+Architecture: sh4
+Section: infos
+Description: ImdB Info Plugin
+Titanname: IMDb
+Showname: IMDb
+Installpath: /var

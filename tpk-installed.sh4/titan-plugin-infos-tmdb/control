@@ -1,0 +1,8 @@
+Package: titan-plugin-infos-tmdb
+Version: 21579
+Architecture: sh4
+Section: infos
+Description: TMDb Movie Database Plugin
+Titanname: TMDb
+Showname: TMDb
+Installpath: /var

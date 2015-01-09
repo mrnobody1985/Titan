@@ -1,0 +1,8 @@
+Package: titan-plugin-tools-filemanager
+Version: 21579
+Architecture: sh4
+Section: tools
+Description: filemanager
+Titanname: File Manager
+Showname: File Manager
+Installpath: /var
