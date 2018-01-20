@@ -1,0 +1,22 @@
+ALL_CFLAGS= -DARM -DDREAMBOX -DMIPSEL -DCAMSUPP -DEPLAYER4 -Os -mhard-float -export-dynamic -Wall -Wno-unused-but-set-variable -Wno-implicit-function-declaration
+
+INCLUDES = \
+	-I../../../../../../sysroots/wetek/usr/include \
+	-I../../../../../../sysroots/wetek/usr/include/gstreamer-1.0 \
+	-I../../../../../../sysroots/wetek/usr/lib/gstreamer-1.0/include \
+	-I../../../../../../sysroots/wetek/usr/include/glib-2.0 \
+	-I../../../../../../sysroots/wetek/usr/include/libxml2 \
+	-I../../../../../../sysroots/wetek/usr/include/openssl \
+	-I../../../../../../sysroots/wetek/usr/include/dreamdvd \
+	-I../../../../../../sysroots/wetek/usr/include/libdreamdvd \
+	-I../libdreamdvd \
+	-I../titan \
+	-I../../../../../../sysroots/wetek/usr/lib/glib-2.0/include \
+	-I../../../../../../sysroots/wetek/usr/include/freetype2
+
+bin_PROGRAMS = titan
+
+titan_SOURCES =	titan.c
+
+titan_LDADD = -lm -lglib-2.0 -lgobject-2.0 -lpthread -ldl -lz -lpng -lfreetype -lgstreamer-1.0 -ldreamdvd -ljpeg -lssl -lcrypto
+titan_CFLAGS = $(ALL_CFLAGS)
