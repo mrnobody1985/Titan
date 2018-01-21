@@ -1,4 +1,4 @@
-ALL_CFLAGS= -DARM -DDREAMBOX -DMIPSEL -DCAMSUPP -DEXTEPLAYER -Os -mhard-float -export-dynamic -Wall -Wno-unused-but-set-variable -Wno-implicit-function-declaration
+ALL_CFLAGS= -DARM -DDREAMBOX -DMIPSEL -DCAMSUPP -DEXTEPLAYER3 -Os -mhard-float -export-dynamic -Wall -Wno-unused-but-set-variable -Wno-implicit-function-declaration
 
 INCLUDES = \
 	-I../../recipe-sysroot/usr/include \
@@ -11,6 +11,7 @@ INCLUDES = \
 	-I../../recipe-sysroot/usr/include/libdreamdvd \
 	-I../libdreamdvd \
 	-I../titan \
+	-I../libeplayer3/include \
 	-I../../recipe-sysroot/usr/lib/glib-2.0/include \
 	-I../../recipe-sysroot/usr/include/freetype2
 
@@ -18,6 +19,6 @@ bin_PROGRAMS = titan
 
 titan_SOURCES =	titan.c
 
-titan_LDADD = -lm -lglib-2.0 -lgobject-2.0 -lpthread -ldl -lz -lpng -lfreetype -ldreamdvd -ljpeg -lssl -lcrypto
+titan_LDADD = -lm -lglib-2.0 -lgobject-2.0 -lpthread -ldl -lz -lpng -lfreetype -ldreamdvd -leplayer3 -ljpeg -lssl -lcrypto
 #titan_LDADD = -lm -lglib-2.0 -lgobject-2.0 -lpthread -ldl -lz -lpng -lfreetype -lgstreamer-1.0 -ldreamdvd -ljpeg -lssl -lcrypto
 titan_CFLAGS = $(ALL_CFLAGS)
