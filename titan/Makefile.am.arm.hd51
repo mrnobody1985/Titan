@@ -1,4 +1,4 @@
-ALL_CFLAGS= -DARM -DMIPSEL -DCAMSUPP -DEPLAYER4 -Os -mhard-float -export-dynamic -Wall -Wno-unused-but-set-variable -Wno-implicit-function-declaration
+ALL_CFLAGS= -DARM -DMIPSEL -DCAMSUPP -DEPLAYER3AUS -DEXTEPLAYER3AUS -Os -mhard-float -export-dynamic -Wall -Wno-unused-but-set-variable -Wno-implicit-function-declaration
 
 INCLUDES = \
 	-I../../../../../../sysroots/hd51/usr/include \
@@ -31,5 +31,6 @@ bin_PROGRAMS = titan
 
 titan_SOURCES =	titan.c
 
-titan_LDADD = -lm -lglib-2.0 -lgobject-2.0 -lpthread -ldl -lz -lpng -lfreetype -lgstreamer-1.0 -ldreamdvd -ljpeg -lssl -lcrypto
+titan_LDADD = -lm -lglib-2.0 -lgobject-2.0 -lpthread -ldl -lz -lpng -lfreetype -ldreamdvd -ljpeg -lssl -lcrypto
+#titan_LDADD = -lm -lglib-2.0 -lgobject-2.0 -lpthread -ldl -lz -lpng -lfreetype -lgstreamer-1.0 -ldreamdvd -ljpeg -lssl -lcrypto
 titan_CFLAGS = $(ALL_CFLAGS)
