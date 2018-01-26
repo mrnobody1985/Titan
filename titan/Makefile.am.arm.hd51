@@ -1,18 +1,19 @@
 ALL_CFLAGS= -DARM -DMIPSEL -DCAMSUPP -DEPLAYER4 -Os -mhard-float -export-dynamic -Wall -Wno-unused-but-set-variable -Wno-implicit-function-declaration
 
 INCLUDES = \
-	-I../../../../../../sysroots/hd51/usr/include \
-	-I../../../../../../sysroots/hd51/usr/include/gstreamer-1.0 \
-	-I../../../../../../sysroots/hd51/usr/lib/gstreamer-1.0/include \
-	-I../../../../../../sysroots/hd51/usr/include/glib-2.0 \
-	-I../../../../../../sysroots/hd51/usr/include/libxml2 \
-	-I../../../../../../sysroots/hd51/usr/include/openssl \
-	-I../../../../../../sysroots/hd51/usr/include/dreamdvd \
-	-I../../../../../../sysroots/hd51/usr/include/libdreamdvd \
+	-I../../recipe-sysroot/usr/include \
+	-I../../recipe-sysroot/usr/include/gstreamer-1.0 \
+	-I../../recipe-sysroot/usr/lib/gstreamer-1.0/include \
+	-I../../recipe-sysroot/usr/include/glib-2.0 \
+	-I../../recipe-sysroot/usr/include/libxml2 \
+	-I../../recipe-sysroot/usr/include/openssl \
+	-I../../recipe-sysroot/usr/include/dreamdvd \
+	-I../../recipe-sysroot/usr/include/libdreamdvd \
 	-I../libdreamdvd \
 	-I../titan \
-	-I../../../../../../sysroots/hd51/usr/lib/glib-2.0/include \
-	-I../../../../../../sysroots/hd51/usr/include/freetype2
+	-I../libeplayer3/include \
+	-I../../recipe-sysroot/usr/lib/glib-2.0/include \
+	-I../../recipe-sysroot/usr/include/freetype2
 
 bin_PROGRAMS = titan
 
